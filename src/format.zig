@@ -154,7 +154,7 @@ fn Writer(comptime ChildWriter: type) type {
         }
 
         pub fn emitIndent(self: *Self) !void {
-            try self.child_writer.writeByteNTimes(' ', self.indentation * 4);
+            try self.child_writer.writeByteNTimes(' ', self.indentation * 2);
             if (self.indentation > 0) self.preceded_by_space = true;
         }
 
